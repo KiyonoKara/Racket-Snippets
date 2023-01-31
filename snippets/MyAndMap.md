@@ -2,7 +2,7 @@
 
 Manual implementation of Racket's `andmap` function. 
 - Use a list / cons
-- Use a boolean function or logical operator 
+- Use a boolean (lambda) function or logical operator 
 
 ```racket 
 ; myandmap : (X) [List-of X] [X -> Boolean] -> Boolean
