@@ -11,9 +11,9 @@ Manual implementation of Racket's `andmap` function.
 
 (define (myandmap ls op?)
   (cond
-    [(empty ls) #true]
-    [(cons ls)
-     (and (op (first ls))
+    [(empty? ls) #true]
+    [(cons? ls)
+     (and (op? (first ls))
           (myandmap (rest ls) op?))]))
 ```  
 ### Examples  
