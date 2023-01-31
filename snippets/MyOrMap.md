@@ -12,15 +12,15 @@ Manual implementation of Racket's `ormap` function.
 (define (myormap ls op?)
   (cond
     [(empty? ls) #false]
-    [(cons? l)
+    [(cons? ls)
      (or (op? (first ls))
          (myormap (rest ls) op?))]))
 ```
 
 ### Examples
 ```racket
-(check-expect (myandmap (list 10 -5 -2) positive?) #true)
-(check-expect (myandmap (list) positive?) #false)
-(check-expect (myandmap (list "6" "24" "str") string?) #true)
-(check-expect (myandmap (list "false" #t) boolean?) #true)
+(check-expect (myormap (list 10 -5 -2) positive?) #true)
+(check-expect (myormap (list) positive?) #false)
+(check-expect (myormap (list "6" "24" "str") string?) #true)
+(check-expect (myormap (list "false" #t) boolean?) #true)
 ```
